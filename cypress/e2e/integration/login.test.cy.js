@@ -32,5 +32,6 @@ describe('Login/ Logout Test', function(){
     it('Should logout from the application', () => {
         cy.contains('username').click()
         cy.get('#logout_link').click()
+        cy.get('strong').should('contain.text','Home')
     });
 });
