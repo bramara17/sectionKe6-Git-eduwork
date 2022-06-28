@@ -21,11 +21,11 @@ describe ('Checkout',() =>{
 
     it('Click Cart Icon', () => {
         cy.get('#shopping_cart_container').click()
-        cy.fixture("userSauce").then(userSauce =>{
-            const uName = userSauce.ussr
-            const uPass = userSauce.pswd
-            cy.login(uName,uPass)
-        })
+        // cy.fixture("userSauce").then(userSauce =>{
+        //     const uName = userSauce.ussr
+        //     const uPass = userSauce.pswd
+        //     cy.login(uName,uPass)
+        // })
         cy.url().should('include','cart.html')
     });
     it('Click Checkout Button', () => {
