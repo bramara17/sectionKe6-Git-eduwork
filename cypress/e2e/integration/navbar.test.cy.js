@@ -16,6 +16,6 @@ describe('Navbar test', function(){
     });
     it('Should display homepage content', () => {
         cy.contains('Zero Bank').click()
-        cy.url().should('include','index.html')
+        cy.get('#nav').should('be.visible')
     });
 });
